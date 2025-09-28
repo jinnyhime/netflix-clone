@@ -1,0 +1,68 @@
+{
+  "hero": {
+    "image": "/images/hero.jpg",
+    "alt": "괴수 8호 포스터",
+    "title": "화제의 시리즈",
+    "desc": "괴수의 사체를 처리하는 청소업자... 뜻밖의 사태가 벌어진다!"
+  },
+  "rows": [
+    {
+      "id": "continue",
+      "title": "원진님이 시청 중인 콘텐츠",
+      "visible": 6,
+      "step": 6,
+      "items": [
+        { "id": "card01", "title": "사이버펑크", "img": "/images/card-01.jpg", "alt": "사이버펑크 포스터" },
+        { "id": "card02", "title": "진격의 거인", "img": "/images/card-02.jpg", "alt": "진격의 거인 포스터" },
+        { "id": "card03", "title": "체인소맨", "img": "/images/card-03.jpg", "alt": "체인소맨 포스터" },
+        { "id": "card04", "title": "최애의 아이", "img": "/images/card-04.jpg", "alt": "최애의 아이 포스터" },
+        { "id": "card05", "title": "주술회전", "img": "/images/card-05.jpg", "alt": "주술회전 포스터" },
+        { "id": "card06", "title": "봇치더록", "img": "/images/card-06.jpg", "alt": "봇치더록 포스터" },
+        { "id": "card07", "title": "그 비스크 돌은 사랑을 한다", "img": "/images/card-07.jpg", "alt": "그 비스크 돌은 사랑을 한다 포스터" },
+        { "id": "card08", "title": "푸른상자", "img": "/images/card-08.jpg", "alt": "푸른상자 포스터" },
+        { "id": "card09", "title": "토라도라!", "img": "/images/card-09.jpg", "alt": "토라도라! 포스터" },
+        { "id": "card10", "title": "스킵과 로퍼", "img": "/images/card-10.jpg", "alt": "스킵과 로퍼 포스터" },
+        { "id": "card11", "title": "호리미야", "img": "/images/card-11.jpg", "alt": "호리미야 포스터" },
+        { "id": "card12", "title": "야마다 군과 Lv999의 사랑을 하다", "img": "/images/card-12.jpg", "alt": "야마다 군과 Lv999의 사랑을 하다 포스터" }
+      ]
+    },
+    {
+      "id": "romance",
+      "title": "연애 세포를 깨우는 작품들",
+      "visible": 5,
+      "step": 5,
+      "items": [
+        { "id": "card07b", "title": "그 비스크 돌은 사랑을 한다", "img": "/images/card-07.jpg", "alt": "그 비스크 돌은 사랑을 한다 포스터" },
+        { "id": "card08b", "title": "푸른상자", "img": "/images/card-08.jpg", "alt": "푸른상자 포스터" },
+        { "id": "card09b", "title": "토라도라!", "img": "/images/card-09.jpg", "alt": "토라도라! 포스터" },
+        { "id": "card10b", "title": "스킵과 로퍼", "img": "/images/card-10.jpg", "alt": "스킵과 로퍼 포스터" },
+        { "id": "card11b", "title": "호리미야", "img": "/images/card-11.jpg", "alt": "호리미야 포스터" },
+        { "id": "card12b", "title": "야마다 군과 Lv999의 사랑을 하다", "img": "/images/card-12.jpg", "alt": "야마다 군과 Lv999의 사랑을 하다 포스터" },
+        { "id": "card01b", "title": "사이버펑크", "img": "/images/card-01.jpg", "alt": "사이버펑크 포스터" },
+        { "id": "card17b", "title": "장송의 프리렌", "img": "/images/card-17.jpg", "alt": "장송의 프리렌 포스터" },
+        { "id": "card03b", "title": "체인소맨", "img": "/images/card-03.jpg", "alt": "체인소맨 포스터" },
+        { "id": "card04b", "title": "최애의 아이", "img": "/images/card-04.jpg", "alt": "최애의 아이 포스터" }
+      ]
+    },
+    {
+      "id": "mealbuddy",
+      "title": "밥친구",
+      "visible": 6,
+      "step": 6,
+      "items": [
+        { "id": "card13", "title": "사이키쿠스오의 재난", "img": "/images/card-13.jpg", "alt": "사이키쿠스오의 재난 포스터" },
+        { "id": "card14", "title": "사카모토데이즈", "img": "/images/card-14.jpg", "alt": "사카모토데이즈 포스터" },
+        { "id": "card15", "title": "스파이패밀리", "img": "/images/card-15.jpg", "alt": "스파이패밀리 포스터" },
+        { "id": "card16", "title": "던전밥", "img": "/images/card-16.jpg", "alt": "던전밥 포스터" },
+        { "id": "card17", "title": "장송의 프리렌", "img": "/images/card-17.jpg", "alt": "장송의 프리렌 포스터" },
+        { "id": "card18", "title": "식극의 소마", "img": "/images/card-18.jpg", "alt": "식극의 소마 포스터" },
+        { "id": "card07c", "title": "그 비스크 돌은 사랑을 한다", "img": "/images/card-07.jpg", "alt": "그 비스크 돌은 사랑을 한다 포스터" },
+        { "id": "card08c", "title": "푸른상자", "img": "/images/card-08.jpg", "alt": "푸른상자 포스터" },
+        { "id": "card09c", "title": "토라도라!", "img": "/images/card-09.jpg", "alt": "토라도라! 포스터" },
+        { "id": "card10c", "title": "스킵과 로퍼", "img": "/images/card-10.jpg", "alt": "스킵과 로퍼 포스터" },
+        { "id": "card11c", "title": "호리미야", "img": "/images/card-11.jpg", "alt": "호리미야 포스터" },
+        { "id": "card12c", "title": "야마다 군과 Lv999의 사랑을 하다", "img": "/images/card-12.jpg", "alt": "야마다 군과 Lv999의 사랑을 하다 포스터" }
+      ]
+    }
+  ]
+}
