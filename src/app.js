@@ -1,6 +1,7 @@
-// src/app.js
 import { ModalHover } from './modal.js';
 import { Slider } from './slider.js';
+import { initSearch } from "./search.js";
+
 
 // 휘발성 좋아요 상태 (새로고침/서버 재시작 시 초기화)
 const likes = new Set();
@@ -32,12 +33,12 @@ const row = (r) => `
 `;
 
 async function start() {
-  // 1) 데이터 가져오기
+  // 데이터 가져오기
   const res = await fetch('/data/home.json', { headers: { Accept: 'application/json' } });
   if (!res.ok) throw new Error('home.json fetch failed');
   const data = await res.json();
 
-  // 2) Hero 채우기
+  // Hero 채우기
   const heroImg = document.getElementById('hero-img');
   const heroTitle = document.getElementById('hero-title');
   const heroDesc = document.getElementById('hero-desc');
@@ -46,11 +47,11 @@ async function start() {
   heroTitle.textContent = data.hero.title;
   heroDesc.textContent = data.hero.desc;
 
-  // 3) Rows 채우기
+  // Rows 채우기
   const rowsMount = document.getElementById('rows');
   rowsMount.innerHTML = data.rows.map(row).join('');
 
-  // 4) 좋아요: 이벤트 위임 (클릭/키보드)
+  // 좋아요: 이벤트 위임 (클릭/키보드)
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('[data-like]');
     if (!btn) return;
@@ -77,7 +78,7 @@ async function start() {
     target.click();
   });
 
-  // 5) 슬라이더 초기화 
+  // 슬라이더 초기화 
   document.querySelectorAll('.row').forEach((rowEl, idx) => {
     const list = rowEl.querySelector('.cards');
     if (!list) return;
@@ -94,7 +95,7 @@ async function start() {
     });
   });
 
-  // 6) 모달/메뉴 (이미지 경로 절대경로로 수정)
+  // 모달/메뉴 (이미지 경로 절대경로로 수정)
   const modal = new ModalHover({
     offset: 10,
     hoverDelayOpen: 80,
@@ -108,6 +109,7 @@ async function start() {
     trigger: 'hover',
     className: 'popover--panel',
     placement: 'bottom-end',
+    fixed: true,   
     render: () => `
       <div class="popover">
         <div class="popover__header">알림</div>
@@ -131,6 +133,7 @@ async function start() {
     trigger: 'hover',
     className: 'popover--menu',
     placement: 'bottom-end',
+    fixed: true,   
     render: () => `
       <div class="popover" role="menu">
         <button role="menuitem" class="menuitem">
@@ -154,4 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mount = document.getElementById('rows');
     if (mount) mount.innerHTML = `<p role="alert">데이터를 불러오지 못했습니다.</p>`;
   });
+
+  // 검색 초기화 호출
+  initSearch();
 });
