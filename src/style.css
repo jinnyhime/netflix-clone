@@ -415,3 +415,54 @@ main {
 /* 카드 래핑 요소(트랙 자식) */
 .slider-track { user-select: none; }
 .slider-item { box-sizing: border-box; padding: 0 4px; } /* 카드 사이 여백 */
+
+/* 검색 박스: 기본 접힘 */
+.search-wrap{
+  position: relative;
+  display:flex; align-items:center; gap:8px;
+  width:0;               /* 접힘 */
+  opacity:0;
+  pointer-events:none;
+  overflow:hidden;
+  transition: width .25s ease, opacity .15s ease;
+  margin-left: 8px;      /* 돋보기와 살짝 간격 */
+}
+
+/* 펼친 상태 */
+.search-wrap.expanded{
+  width: 520px;          /* 필요 너비 */
+  opacity:1;
+  pointer-events:auto;
+}
+
+.search-wrap form{ flex:1; }
+.search-wrap input[type="search"]{
+  width:100%; padding:.6rem .8rem; border-radius:999px; border:1px solid #333;
+  background:#111; color:#fff; outline:none; transition:box-shadow .2s;
+}
+.search-wrap input[type="search"]:focus,
+.search-wrap input[type="search"]:focus-visible {
+  box-shadow: none;
+  outline: none;
+}
+
+/* 레이어는 search-wrap 기준으로 뜸 */
+.recent-layer,.results{
+  position:absolute; left:0; right:0; top:44px;
+  background:#181818; border:1px solid #333; border-radius:8px; padding:.5rem;
+  max-height:280px; overflow:auto; z-index:1000;
+}
+
+/* 검색 결과 페이지 */
+.search-page { padding: 0 var(--space-24); }
+.search-cards {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; gap: var(--space-16);
+  grid-template-columns: repeat(6, 1fr);
+}
+@media (max-width: 1200px){ .search-cards{ grid-template-columns: repeat(5, 1fr); } }
+@media (max-width: 992px){  .search-cards{ grid-template-columns: repeat(4, 1fr); } }
+@media (max-width: 768px){  .search-cards{ grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 520px){  .search-cards{ grid-template-columns: repeat(2, 1fr); } }
+
+.search-empty { color: var(--muted); padding: var(--space-24) 0; }

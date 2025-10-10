@@ -7,18 +7,45 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
+# Node
+node_modules/
+**/node_modules/
+
+# Builds & caches
+dist/
+dist-ssr/
+.vite/
+.temp/
+.tmp/
+.cache/
 *.local
 
-# Editor directories and files
+# Env
+.env
+.env.*
+!.env.example
+
+# Test & tooling
+coverage/
+.eslintcache
+
+# OS / IDE
+.DS_Store
+Thumbs.db
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# Server (optional explicit ignores if you keep a separate folder)
+server/.env
+server/dist/
+server/node_modules/
+
+# Deploy providers (optional)
+.vercel/
+.netlify/
